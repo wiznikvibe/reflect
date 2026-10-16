@@ -54,7 +54,7 @@ Ingest the catalog. The first run downloads EmbeddingGemma.
 
 ```bash
 cd backend
-python -m app.ingest --rebuild
+python3 -m app.ingest --rebuild
 ```
 
 Start the API:
@@ -78,7 +78,7 @@ Open `http://localhost:5173`. The sample room loads from `data/rooms/sample_livi
 Backend tests, from `backend/`:
 
 ```bash
-python -m pytest
+python3 -m pytest
 ```
 
 ## Eval
@@ -88,25 +88,25 @@ Fixtures live in `data/evals/queries.json` (8 cases). Each case has a room fixtu
 From `backend/`:
 
 ```bash
-python scripts/run_eval.py --mock
-python scripts/run_eval.py --mock --retrieval-only
-python scripts/run_eval.py
+python3 scripts/run_eval.py --mock
+python3 scripts/run_eval.py --mock --retrieval-only
+python3 scripts/run_eval.py
 ```
 
 | Flag | What runs |
 |---|---|
 | `--mock` | `FakeEmbedder`, a temporary Chroma index, and a scripted planner. No API key and no model download. This is the CI path. |
-| `--mock --retrieval-only` | Same index, retrieval and constraints only. Approximate cost is 0. |
+| `--mock --retrieval-only` | Same index, retrieval and constraints only. Approximate cost is 0. Prefer this when you want a discriminative constraint-violation signal. |
 | (none) | Persisted `backend/.chroma/` and live Gemini. Requires `GOOGLE_API_KEY` in `.env` and a prior ingest. |
 
 The report prints:
 
 - **Retrieval hit rate** — fraction of cases where at least one `relevant_product_ids` is in the top 12 after the agent's metadata filters.
-- **Constraint-violation rate** — fraction of cases whose plan breaks a `must_respect` rule. `budget` means `total_usd` is above the room budget. `fit` means a sofa or chair is wider than the longest usable wall. `--retrieval-only` applies those checks to accepted candidates.
+- **Constraint-violation rate** — fraction of cases whose outputs break a `must_respect` rule. `budget` means total price above the room budget. `fit` means a sofa or chair wider than the longest usable wall. On the **full graph** path this rate is usually near 0 because `constrain` pre-filters candidates and `repair_plan` drops over-budget items — treat it as a regression smoke check, not a measure of raw LLM adherence. Use **`--retrieval-only`** to score accepted candidates before planning.
 - **Latency p50 / p95** — milliseconds per case. The full path uses the graph's own latency. Retrieval-only times retrieve plus constrain.
 - **Mean approx cost** — average estimated Gemini spend. Rates default to Gemini 2.5 Flash text: $0.30 / 1M input tokens and $2.50 / 1M output tokens. The scripted planner reports 120 prompt tokens and 30 completion tokens.
 
-`--mock` uses `FakeEmbedder`, which hashes text, so rank inside a filter is not a semantic score. Several fixtures filter to fewer than 12 SKUs, and a mock hit rate can still be 1. Run `python scripts/run_eval.py` after ingest when you want EmbeddingGemma ranking.
+`--mock` uses `FakeEmbedder`, which hashes text, so rank inside a filter is not a semantic score. Several fixtures filter to fewer than 12 SKUs, and a mock hit rate can still be 1. Run `python3 scripts/run_eval.py` after ingest when you want EmbeddingGemma ranking.
 
 ## Real vs mocked
 
@@ -116,7 +116,7 @@ The report prints:
 | Deterministic size, budget, and style checks | Full spatial collision / layout solver |
 | LangGraph + Gemini plan + multi-turn chat | Auth, production monitoring, multimodal reference images |
 | React demo UI + eval script | 3D walkthrough / rendering |
-| Live eval (`python scripts/run_eval.py`) | `--mock` eval: `FakeEmbedder` + scripted planner |
+| Live eval (`python3 scripts/run_eval.py`) | `--mock` eval: `FakeEmbedder` + scripted planner |
 
 Room JSON in `data/rooms/` and `data/evals/rooms/` stands in for a Nestingale scan.
 
