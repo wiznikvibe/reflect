@@ -39,6 +39,7 @@ export function App() {
   const [health, setHealth] = useState<HealthStatus | null>(null);
   const [healthError, setHealthError] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [warning, setWarning] = useState<string | null>(null);
   const [opening, setOpening] = useState(false);
   const [streaming, setStreaming] = useState(false);
   const sendingRef = useRef(false);
@@ -74,6 +75,7 @@ export function App() {
     if (!parsed.room || opening || sendingRef.current) return;
     setOpening(true);
     setError(null);
+    setWarning(null);
     try {
       const nextId = await createSession(parsed.room);
       setSessionId(nextId);
@@ -94,6 +96,7 @@ export function App() {
     sendingRef.current = true;
     setStreaming(true);
     setError(null);
+    setWarning(null);
     setMessages((current) => [
       ...current,
       { role: "user", content: message },
@@ -119,10 +122,16 @@ export function App() {
           /* Metrics and the plan are already on screen; the saved session is read next. */
         },
       });
-      const saved = await getPlan(sessionId);
-      setPlan(saved.plan);
-      setProducts(saved.products);
-      setMetrics(saved.metrics);
+      try {
+        const saved = await getPlan(sessionId);
+        setPlan(saved.plan);
+        setProducts(saved.products);
+        setMetrics(saved.metrics);
+      } catch (reason) {
+        const detail =
+          reason instanceof Error ? reason.message : "Could not refresh the saved plan.";
+        setWarning(detail);
+      }
     } catch (reason) {
       const detail = reason instanceof Error ? reason.message : "The planning turn failed.";
       setError(detail);
@@ -172,6 +181,11 @@ export function App() {
       {error ? (
         <p className="banner" role="alert">
           {error}
+        </p>
+      ) : null}
+      {warning ? (
+        <p className="banner banner-warning" role="status">
+          {warning}
         </p>
       ) : null}
 

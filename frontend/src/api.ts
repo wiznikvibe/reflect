@@ -224,7 +224,12 @@ export function parseSseBlock(block: string): SseEvent | null {
 function dispatchSse(block: string, handlers: ChatHandlers): void {
   const parsed = parseSseBlock(block);
   if (!parsed) return;
-  const payload = JSON.parse(parsed.data) as Record<string, unknown>;
+  let payload: Record<string, unknown>;
+  try {
+    payload = JSON.parse(parsed.data) as Record<string, unknown>;
+  } catch {
+    return;
+  }
   if (parsed.event === "token") {
     handlers.onToken(typeof payload.text === "string" ? payload.text : "");
     return;

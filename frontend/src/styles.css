@@ -198,6 +198,11 @@ p {
   background: var(--card);
 }
 
+.banner-warning {
+  border-color: color-mix(in srgb, var(--ink) 22%, transparent);
+  color: color-mix(in srgb, var(--ink) 78%, transparent);
+}
+
 .spread {
   display: grid;
   grid-template-columns: minmax(260px, 320px) minmax(0, 1fr) minmax(280px, 360px);
