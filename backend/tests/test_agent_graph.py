@@ -216,7 +216,73 @@ def test_accepted_candidates_are_sliced_to_eight_before_plan(monkeypatch, tmp_pa
     assert FORBIDDEN in planner.prompts[0]
 
 
-def test_constraints_get_budget_minus_current_selection(monkeypatch, tmp_path):
+def test_retrieval_query_includes_recent_chat_history(monkeypatch, tmp_path):
+    products = [_catalog_item("sofa-a", category="sofas", price=400, width_cm=180)]
+    seen: dict = {}
+
+    def spy(query, room, filters, top_k, **kwargs):
+        seen["query"] = query
+        from app.retrieval import retrieve as real_retrieve
+
+        return real_retrieve(query, room, filters, top_k, **kwargs)
+
+    monkeypatch.setattr("app.agent.graph.retrieve", spy)
+    marker = "navy sectional facing the window"
+    padded = "pad-" + ("y" * 800)
+    planner = ScriptedPlanner(lambda ids: ids[:1])
+    result = _invoke(
+        tmp_path,
+        products,
+        planner,
+        message="make it cheaper",
+        history=[
+            {"role": "user", "content": "DROP_ME_ANCIENT"},
+            {"role": "assistant", "content": "old reply to drop"},
+            {"role": "user", "content": marker},
+            {"role": "assistant", "content": "Suggested the oslo sofa."},
+            {"role": "user", "content": "keep the linen"},
+            {"role": "assistant", "content": padded},
+        ],
+    )
+
+    query = seen["query"]
+    assert query == result["retrieval_query"]
+    assert "make it cheaper" in query
+    assert marker in query
+    assert "Suggested the oslo sofa." in query
+    assert "keep the linen" in query
+    assert "Need a sofa that faces the window" in query
+    assert "DROP_ME_ANCIENT" not in query
+    assert "old reply to drop" not in query
+    assert padded not in query
+    assert "pad-" in query
+
+
+def test_replacement_price_filter_uses_full_room_budget(tmp_path):
+    products = [
+        _catalog_item("sofa-upgrade", category="sofas", price=900, width_cm=180),
+        _catalog_item("sofa-too-much", category="sofas", price=1500, width_cm=180),
+        _catalog_item("sofa-wide", category="sofas", price=400, width_cm=600),
+    ]
+    planner = ScriptedPlanner(lambda ids: ["sofa-upgrade"])
+    result = _invoke(
+        tmp_path,
+        products,
+        planner,
+        message="replace the sofa",
+        budget_usd=1000,
+        selected_products=[_kept_sofa()],
+    )
+
+    assert result["filters"]["max_price_usd"] == pytest.approx(1000)
+    assert result["remaining_budget"] == pytest.approx(600)
+    assert planner.candidate_ids[0] == ["sofa-upgrade"]
+    assert [item["product_id"] for item in result["plan"]["items"]] == ["sofa-upgrade"]
+    assert result["plan"]["total_usd"] == pytest.approx(900)
+    assert result["plan"]["budget_remaining_usd"] == pytest.approx(100)
+
+
+def test_price_filter_uses_full_room_budget_and_repair_trims(monkeypatch, tmp_path):
     products = [
         _catalog_item("rug-a", category="rugs", price=500),
         _catalog_item("rug-b", category="rugs", price=500),
@@ -243,8 +309,9 @@ def test_constraints_get_budget_minus_current_selection(monkeypatch, tmp_path):
         history=[{"role": "user", "content": "we already picked the sofa"}],
     )
 
-    assert seen["remaining_budget"] == pytest.approx(600)
+    assert seen["remaining_budget"] == pytest.approx(1000)
     assert "keep-sofa" in seen["selected"]
+    assert result["filters"]["max_price_usd"] == pytest.approx(1000)
     assert result["remaining_budget"] == pytest.approx(600)
     assert "pricey-chair" not in planner.candidate_ids[0]
     assert set(planner.candidate_ids[0]) == {"rug-a", "rug-b"}

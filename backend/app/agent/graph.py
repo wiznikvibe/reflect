@@ -24,6 +24,8 @@ from app.schemas import ChatMessage, DesignPlan, DesignPlanItem, Room
 DEFAULT_GEMINI_MODEL = "gemini-2.5-flash"
 MAX_PLAN_CANDIDATES = 8
 TOP_K = 12
+HISTORY_TURNS = 4
+HISTORY_TURN_CHARS = 200
 
 _CATEGORY_PATTERNS: tuple[tuple[str, str], ...] = (
     ("coffee_tables", r"\bcoffee tables?\b"),
@@ -61,6 +63,29 @@ def _history_lines(history: list[ChatMessage | dict]) -> list[str]:
             role, content = str(message.get("role", "user")), str(message.get("content", ""))
         lines.append(f"{role}: {content}")
     return lines
+
+
+def _recent_history_for_retrieval(
+    history: list[ChatMessage | dict],
+    *,
+    turns: int = HISTORY_TURNS,
+    max_chars: int = HISTORY_TURN_CHARS,
+) -> str:
+    """Last few turns, each truncated, so follow-ups still name the category."""
+
+    clipped: list[str] = []
+    for message in history[-turns:]:
+        if isinstance(message, ChatMessage):
+            role, content = message.role, message.content
+        else:
+            role, content = str(message.get("role", "user")), str(message.get("content", ""))
+        content = content.strip()
+        if not content:
+            continue
+        if len(content) > max_chars:
+            content = content[:max_chars].rstrip()
+        clipped.append(f"{role}: {content}")
+    return " ".join(clipped)
 
 
 def _candidate_line(candidate: ProductCandidate, room: Room) -> str:
@@ -105,7 +130,9 @@ def build_plan_prompt(
         "",
         f"Room: {room.model_dump_json()}",
         f"Room budget USD: {room.budget_usd:.2f}",
-        f"Remaining budget for new items USD: {remaining_budget:.2f}",
+        f"Remaining budget if the current selection is kept USD: {remaining_budget:.2f}",
+        "A replacement may cost more than that leftover when it drops a selected item.",
+        "The full selection must stay within the room budget.",
         f"Current message: {message}",
         "History:",
         *(history_lines or ["- none"]),
@@ -298,7 +325,10 @@ def build_graph(
         spent = sum(float(product["price_usd"]) for product in selected)
         remaining = max(0.0, float(room.budget_usd) - spent)
         categories = detect_categories(message)
-        filters: dict[str, Any] = {"max_price_usd": remaining}
+        # Full room budget: a replacement can cost more than leftover spend and
+        # still fit once the item it replaces is dropped. repair_plan enforces
+        # the sum against room.budget_usd.
+        filters: dict[str, Any] = {"max_price_usd": float(room.budget_usd)}
         if categories:
             filters["categories"] = categories
         if categories and set(categories) <= FIT_CATEGORIES:
@@ -307,7 +337,13 @@ def build_graph(
             if max_width_cm > 0:
                 filters["max_width_cm"] = max_width_cm
         notes = room.user_notes.strip()
-        retrieval_query = f"{message} {notes}".strip() if notes else message
+        history_text = _recent_history_for_retrieval(list(state.get("history") or []))
+        parts = [message]
+        if history_text:
+            parts.append(history_text)
+        if notes:
+            parts.append(notes)
+        retrieval_query = " ".join(parts).strip()
         return {
             "retrieval_query": retrieval_query,
             "filters": filters,
@@ -336,7 +372,7 @@ def build_graph(
             candidates,
             room,
             selected_ids,
-            float(state.get("remaining_budget", room.budget_usd)),
+            float(room.budget_usd),
         )
         accepted = result.accepted[:MAX_PLAN_CANDIDATES]
         rejected_notes = [f"{item.candidate.id}: {item.reason}" for item in result.rejected]
