@@ -101,7 +101,7 @@ def test_readme_documents_gemini_25_flash_and_has_no_api_key():
     assert "gemini-2.0-flash" not in text
     assert "GOOGLE_API_KEY" in text
     assert ".env.example" in text
-    assert "python -m app.ingest --rebuild" in text
+    assert "python3 -m app.ingest --rebuild" in text
     assert "uvicorn app.main:app" in text
     assert "npm run dev" in text
     assert "FakeEmbedder" in text

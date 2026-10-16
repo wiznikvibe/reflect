@@ -404,7 +404,7 @@ def _require_index(chroma_dir: Path) -> None:
     if not chroma_dir.exists():
         raise RuntimeError(
             f"Chroma index not found at {chroma_dir}. "
-            "From backend/, run: python -m app.ingest --rebuild"
+            "From backend/, run: python3 -m app.ingest --rebuild"
         )
     try:
         count = get_collection(chroma_dir).count()
@@ -413,7 +413,7 @@ def _require_index(chroma_dir: Path) -> None:
     if count <= 0:
         raise RuntimeError(
             f"Chroma index at {chroma_dir} is empty. "
-            "From backend/, run: python -m app.ingest --rebuild"
+            "From backend/, run: python3 -m app.ingest --rebuild"
         )
 
 
