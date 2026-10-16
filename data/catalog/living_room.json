@@ -1,0 +1,997 @@
+[
+  {
+    "id": "sofa-oslo-linen",
+    "name": "Oslo Three-Seat Sofa",
+    "category": "sofas",
+    "style_tags": [
+      "modern",
+      "scandinavian"
+    ],
+    "dimensions": {
+      "width_cm": 210,
+      "depth_cm": 88,
+      "height_cm": 80
+    },
+    "price_usd": 899,
+    "material": "oatmeal linen",
+    "description": "Low-arm three-seat sofa on a kiln-dried oak base with feather-blend seat cushions. The oatmeal linen stays visually light in a modest living room."
+  },
+  {
+    "id": "sofa-fjord-wool",
+    "name": "Fjord Low Sofa",
+    "category": "sofas",
+    "style_tags": [
+      "scandinavian",
+      "minimalist"
+    ],
+    "dimensions": {
+      "width_cm": 220,
+      "depth_cm": 90,
+      "height_cm": 76
+    },
+    "price_usd": 1290,
+    "material": "wool boucle",
+    "description": "Deep seat and a low back in oatmeal wool boucle so the sofa can sit under a window without blocking the view. Rounded arms and short oak legs."
+  },
+  {
+    "id": "sofa-haven-sectional",
+    "name": "Haven L-Sectional",
+    "category": "sofas",
+    "style_tags": [
+      "modern",
+      "contemporary"
+    ],
+    "dimensions": {
+      "width_cm": 280,
+      "depth_cm": 168,
+      "height_cm": 84
+    },
+    "price_usd": 1890,
+    "material": "performance fabric",
+    "description": "Left-chaise sectional in sand performance fabric with loose back cushions. The 280 cm run needs the longer wall."
+  },
+  {
+    "id": "sofa-midmod-tweed",
+    "name": "Midmod Tweed Sofa",
+    "category": "sofas",
+    "style_tags": [
+      "mid-century"
+    ],
+    "dimensions": {
+      "width_cm": 198,
+      "depth_cm": 82,
+      "height_cm": 79
+    },
+    "price_usd": 1100,
+    "material": "walnut and tweed",
+    "description": "Tapered walnut legs, track arms, and charcoal tweed upholstery in a late-1950s three-seat silhouette. Firm seat, no button tufting."
+  },
+  {
+    "id": "sofa-walnut-leather",
+    "name": "Walnut Leather Sofa",
+    "category": "sofas",
+    "style_tags": [
+      "mid-century",
+      "modern"
+    ],
+    "dimensions": {
+      "width_cm": 206,
+      "depth_cm": 90,
+      "height_cm": 82
+    },
+    "price_usd": 1650,
+    "material": "top-grain leather",
+    "description": "Cognac top-grain leather on a walnut frame with one long seat cushion. Wipes clean and darkens slightly with use."
+  },
+  {
+    "id": "sofa-loft-chesterfield",
+    "name": "Loft Chesterfield Sofa",
+    "category": "sofas",
+    "style_tags": [
+      "industrial",
+      "traditional"
+    ],
+    "dimensions": {
+      "width_cm": 220,
+      "depth_cm": 96,
+      "height_cm": 78
+    },
+    "price_usd": 2100,
+    "material": "full-grain leather",
+    "description": "Deep-buttoned tobacco leather with a stained oak plinth instead of turned feet. Heavy and formal, suited to a brick-wall loft."
+  },
+  {
+    "id": "sofa-indigo-velvet",
+    "name": "Indigo Velvet Sofa",
+    "category": "sofas",
+    "style_tags": [
+      "modern",
+      "glam"
+    ],
+    "dimensions": {
+      "width_cm": 214,
+      "depth_cm": 92,
+      "height_cm": 80
+    },
+    "price_usd": 1450,
+    "material": "cotton velvet",
+    "description": "Inky blue cotton velvet, a tight back, and slim black metal legs. One saturated piece against otherwise neutral walls."
+  },
+  {
+    "id": "sofa-coastal-slipcover",
+    "name": "Coastal Slipcover Sofa",
+    "category": "sofas",
+    "style_tags": [
+      "coastal",
+      "scandinavian"
+    ],
+    "dimensions": {
+      "width_cm": 208,
+      "depth_cm": 90,
+      "height_cm": 86
+    },
+    "price_usd": 780,
+    "material": "washed cotton",
+    "description": "Relaxed three-seat with a machine-washable white cotton slipcover and a slightly slumped seat. Meant for a sunny window wall."
+  },
+  {
+    "id": "sofa-rustic-oak",
+    "name": "Rustic Oak Frame Sofa",
+    "category": "sofas",
+    "style_tags": [
+      "rustic",
+      "farmhouse"
+    ],
+    "dimensions": {
+      "width_cm": 228,
+      "depth_cm": 94,
+      "height_cm": 88
+    },
+    "price_usd": 980,
+    "material": "linen and oak",
+    "description": "Exposed oak arms and a loose oatmeal linen cushion set. The frame carries the look, so it does not need a pile of pillows."
+  },
+  {
+    "id": "sofa-japandi-daybed",
+    "name": "Japandi Daybed Sofa",
+    "category": "sofas",
+    "style_tags": [
+      "japandi",
+      "minimalist"
+    ],
+    "dimensions": {
+      "width_cm": 190,
+      "depth_cm": 86,
+      "height_cm": 70
+    },
+    "price_usd": 860,
+    "material": "linen",
+    "description": "Low armless daybed on a light ash platform with a single long bolster. Seating by day and a guest bed with a throw."
+  },
+  {
+    "id": "sofa-compact-loveseat",
+    "name": "Compact Boucle Loveseat",
+    "category": "sofas",
+    "style_tags": [
+      "modern",
+      "scandinavian"
+    ],
+    "dimensions": {
+      "width_cm": 152,
+      "depth_cm": 84,
+      "height_cm": 78
+    },
+    "price_usd": 620,
+    "material": "boucle",
+    "description": "Two-seat loveseat in cream boucle with short oak legs. Sized for rooms where a full sofa would crowd the coffee table."
+  },
+  {
+    "id": "sofa-cloud-modular",
+    "name": "Cloud Modular Sofa",
+    "category": "sofas",
+    "style_tags": [
+      "contemporary",
+      "modern"
+    ],
+    "dimensions": {
+      "width_cm": 260,
+      "depth_cm": 102,
+      "height_cm": 68
+    },
+    "price_usd": 2400,
+    "material": "boucle",
+    "description": "Three deep modules in cloud boucle on a recessed plinth. The lowest back in the catalog, for open plans where the sofa should not block a view."
+  },
+  {
+    "id": "chair-bergen-lounge",
+    "name": "Bergen Lounge Chair",
+    "category": "chairs",
+    "style_tags": [
+      "scandinavian",
+      "modern"
+    ],
+    "dimensions": {
+      "width_cm": 78,
+      "depth_cm": 82,
+      "height_cm": 76
+    },
+    "price_usd": 420,
+    "material": "oak and wool",
+    "description": "Curved oak shell with a loose light-gray wool seat pad. Sits well alone beside a window or paired across from a sofa."
+  },
+  {
+    "id": "chair-shell-lounge",
+    "name": "Shell Lounge Chair",
+    "category": "chairs",
+    "style_tags": [
+      "mid-century",
+      "modern"
+    ],
+    "dimensions": {
+      "width_cm": 84,
+      "depth_cm": 80,
+      "height_cm": 82
+    },
+    "price_usd": 540,
+    "material": "molded plywood and leather",
+    "description": "Molded walnut plywood shell, black leather cushion, and a wire swivel base. The familiar mid-century lounge silhouette."
+  },
+  {
+    "id": "chair-accent-boucle",
+    "name": "Accent Boucle Chair",
+    "category": "chairs",
+    "style_tags": [
+      "modern",
+      "contemporary"
+    ],
+    "dimensions": {
+      "width_cm": 76,
+      "depth_cm": 78,
+      "height_cm": 80
+    },
+    "price_usd": 310,
+    "material": "boucle",
+    "description": "Rounded accent chair in ivory boucle with a fully upholstered base. Soft enough for reading, structured enough to face a sofa."
+  },
+  {
+    "id": "chair-pipe-armchair",
+    "name": "Pipe Armchair",
+    "category": "chairs",
+    "style_tags": [
+      "industrial"
+    ],
+    "dimensions": {
+      "width_cm": 72,
+      "depth_cm": 74,
+      "height_cm": 78
+    },
+    "price_usd": 280,
+    "material": "steel and leather",
+    "description": "Black pipe frame with saddle-leather straps for the seat and back. Light enough to pull up to a coffee table."
+  },
+  {
+    "id": "chair-linen-wingback",
+    "name": "Linen Wingback Chair",
+    "category": "chairs",
+    "style_tags": [
+      "traditional",
+      "transitional"
+    ],
+    "dimensions": {
+      "width_cm": 80,
+      "depth_cm": 86,
+      "height_cm": 106
+    },
+    "price_usd": 490,
+    "material": "linen",
+    "description": "Tall wingback in stone linen with dark tapered legs. The high back blocks a draft from a nearby doorway."
+  },
+  {
+    "id": "chair-papasan",
+    "name": "Papasan Chair",
+    "category": "chairs",
+    "style_tags": [
+      "bohemian"
+    ],
+    "dimensions": {
+      "width_cm": 110,
+      "depth_cm": 110,
+      "height_cm": 84
+    },
+    "price_usd": 220,
+    "material": "rattan and cotton",
+    "description": "Round rattan bowl on a matching stand with a thick natural cotton cushion. Wide stance, so it belongs in a corner rather than a narrow aisle."
+  },
+  {
+    "id": "chair-japandi-low",
+    "name": "Low Floor Chair",
+    "category": "chairs",
+    "style_tags": [
+      "japandi"
+    ],
+    "dimensions": {
+      "width_cm": 66,
+      "depth_cm": 72,
+      "height_cm": 68
+    },
+    "price_usd": 260,
+    "material": "oak and linen",
+    "description": "Low oak frame and a thin linen cushion for seating close to a low coffee table. Also works as extra seating when guests sit on the floor."
+  },
+  {
+    "id": "chair-swivel-velvet",
+    "name": "Swivel Velvet Chair",
+    "category": "chairs",
+    "style_tags": [
+      "modern",
+      "glam"
+    ],
+    "dimensions": {
+      "width_cm": 78,
+      "depth_cm": 80,
+      "height_cm": 84
+    },
+    "price_usd": 380,
+    "material": "velvet",
+    "description": "Moss-green velvet chair on a low disk swivel. Turns toward conversation or the window without reading as an office chair."
+  },
+  {
+    "id": "chair-oak-rocker",
+    "name": "Oak Rocker",
+    "category": "chairs",
+    "style_tags": [
+      "scandinavian",
+      "mid-century"
+    ],
+    "dimensions": {
+      "width_cm": 68,
+      "depth_cm": 92,
+      "height_cm": 96
+    },
+    "price_usd": 450,
+    "material": "oak and wool",
+    "description": "Steam-bent oak runners and a charcoal woven-wool seat. Needs clear floor behind the runners."
+  },
+  {
+    "id": "chair-slipper",
+    "name": "Slipper Chair",
+    "category": "chairs",
+    "style_tags": [
+      "traditional",
+      "coastal"
+    ],
+    "dimensions": {
+      "width_cm": 70,
+      "depth_cm": 76,
+      "height_cm": 78
+    },
+    "price_usd": 240,
+    "material": "cotton",
+    "description": "Armless slipper chair in pale blue cotton with a tight seat. Small enough to tuck beside a sofa as a third seat."
+  },
+  {
+    "id": "chair-club-leather",
+    "name": "Club Leather Chair",
+    "category": "chairs",
+    "style_tags": [
+      "mid-century",
+      "industrial"
+    ],
+    "dimensions": {
+      "width_cm": 88,
+      "depth_cm": 90,
+      "height_cm": 74
+    },
+    "price_usd": 720,
+    "material": "leather",
+    "description": "Low club chair in black leather with a wide track arm and a solid wood plinth. Visually heavy; one is enough in a small room."
+  },
+  {
+    "id": "chair-cane-side",
+    "name": "Cane Side Chair",
+    "category": "chairs",
+    "style_tags": [
+      "scandinavian",
+      "coastal"
+    ],
+    "dimensions": {
+      "width_cm": 52,
+      "depth_cm": 54,
+      "height_cm": 82
+    },
+    "price_usd": 180,
+    "material": "cane and oak",
+    "description": "Oak side chair with a cane back, meant as pull-up seating rather than a lounge chair. Light enough to move when the room is rearranged."
+  },
+  {
+    "id": "table-coffee-oval-oak",
+    "name": "Oval Oak Coffee Table",
+    "category": "coffee_tables",
+    "style_tags": [
+      "scandinavian",
+      "modern"
+    ],
+    "dimensions": {
+      "width_cm": 120,
+      "depth_cm": 60,
+      "height_cm": 42
+    },
+    "price_usd": 340,
+    "material": "oak",
+    "description": "Solid white-oak oval with softened edges and a lower shelf for books. The oval keeps walkways clear around a sofa."
+  },
+  {
+    "id": "table-coffee-marble",
+    "name": "Marble Slab Coffee Table",
+    "category": "coffee_tables",
+    "style_tags": [
+      "modern",
+      "contemporary"
+    ],
+    "dimensions": {
+      "width_cm": 130,
+      "depth_cm": 70,
+      "height_cm": 38
+    },
+    "price_usd": 680,
+    "material": "marble and steel",
+    "description": "Honed white marble top on a thin blackened-steel frame. Heavy, cool, and easy to style with a single tray."
+  },
+  {
+    "id": "table-coffee-walnut-round",
+    "name": "Round Walnut Coffee Table",
+    "category": "coffee_tables",
+    "style_tags": [
+      "mid-century"
+    ],
+    "dimensions": {
+      "width_cm": 100,
+      "depth_cm": 100,
+      "height_cm": 40
+    },
+    "price_usd": 420,
+    "material": "walnut",
+    "description": "A 100 cm walnut circle with tapered legs and a small drawer. Round tops suit sectionals and conversation seating."
+  },
+  {
+    "id": "table-coffee-crate",
+    "name": "Crate Coffee Table",
+    "category": "coffee_tables",
+    "style_tags": [
+      "industrial"
+    ],
+    "dimensions": {
+      "width_cm": 110,
+      "depth_cm": 60,
+      "height_cm": 45
+    },
+    "price_usd": 260,
+    "material": "reclaimed wood and steel",
+    "description": "Reclaimed pine planks on a black steel crate base with an open lower shelf. The finish is intentionally uneven."
+  },
+  {
+    "id": "table-coffee-travertine",
+    "name": "Travertine Coffee Table",
+    "category": "coffee_tables",
+    "style_tags": [
+      "modern",
+      "minimalist"
+    ],
+    "dimensions": {
+      "width_cm": 140,
+      "depth_cm": 70,
+      "height_cm": 36
+    },
+    "price_usd": 750,
+    "material": "travertine",
+    "description": "Low rectangular block of unfilled travertine with no legs, so the visual weight stays on the floor."
+  },
+  {
+    "id": "table-coffee-nesting",
+    "name": "Nesting Oak Coffee Tables",
+    "category": "coffee_tables",
+    "style_tags": [
+      "scandinavian"
+    ],
+    "dimensions": {
+      "width_cm": 90,
+      "depth_cm": 50,
+      "height_cm": 42
+    },
+    "price_usd": 210,
+    "material": "oak",
+    "description": "Two oak nesting tables that slide together when the room needs floor space. The smaller one can stand in as a side surface."
+  },
+  {
+    "id": "table-coffee-glass",
+    "name": "Glass Top Coffee Table",
+    "category": "coffee_tables",
+    "style_tags": [
+      "modern"
+    ],
+    "dimensions": {
+      "width_cm": 120,
+      "depth_cm": 60,
+      "height_cm": 40
+    },
+    "price_usd": 190,
+    "material": "glass and chrome",
+    "description": "Clear tempered glass on a chrome sled base. Visually light in a tight room so the rug stays visible."
+  },
+  {
+    "id": "table-coffee-live-edge",
+    "name": "Live Edge Coffee Table",
+    "category": "coffee_tables",
+    "style_tags": [
+      "rustic"
+    ],
+    "dimensions": {
+      "width_cm": 132,
+      "depth_cm": 66,
+      "height_cm": 42
+    },
+    "price_usd": 520,
+    "material": "walnut",
+    "description": "Single walnut slab with a natural edge and a black steel U-base. Width is measured at the longest point."
+  },
+  {
+    "id": "table-coffee-japandi",
+    "name": "Low Ash Coffee Table",
+    "category": "coffee_tables",
+    "style_tags": [
+      "japandi"
+    ],
+    "dimensions": {
+      "width_cm": 110,
+      "depth_cm": 55,
+      "height_cm": 32
+    },
+    "price_usd": 290,
+    "material": "ash",
+    "description": "Very low ash table with a lifted lip, sized for floor seating and low sofas. A tray stores underneath."
+  },
+  {
+    "id": "table-coffee-drum",
+    "name": "Drum Coffee Table",
+    "category": "coffee_tables",
+    "style_tags": [
+      "bohemian",
+      "mid-century"
+    ],
+    "dimensions": {
+      "width_cm": 80,
+      "depth_cm": 80,
+      "height_cm": 46
+    },
+    "price_usd": 180,
+    "material": "mango wood",
+    "description": "Carved mango-wood drum used as a small coffee table. Better in front of a loveseat than a full three-seat sofa."
+  },
+  {
+    "id": "table-side-round-oak",
+    "name": "Round Oak Side Table",
+    "category": "side_tables",
+    "style_tags": [
+      "scandinavian"
+    ],
+    "dimensions": {
+      "width_cm": 45,
+      "depth_cm": 45,
+      "height_cm": 55
+    },
+    "price_usd": 120,
+    "material": "oak",
+    "description": "Three-leg white-oak side table at sofa-arm height. Stable enough for a lamp and a glass."
+  },
+  {
+    "id": "table-side-marble",
+    "name": "Marble Pedestal Side Table",
+    "category": "side_tables",
+    "style_tags": [
+      "modern"
+    ],
+    "dimensions": {
+      "width_cm": 40,
+      "depth_cm": 40,
+      "height_cm": 52
+    },
+    "price_usd": 210,
+    "material": "marble",
+    "description": "Small honed-marble disk on a solid pedestal. Tight footprint beside a lounge chair."
+  },
+  {
+    "id": "table-side-c",
+    "name": "C-Shaped Side Table",
+    "category": "side_tables",
+    "style_tags": [
+      "modern"
+    ],
+    "dimensions": {
+      "width_cm": 45,
+      "depth_cm": 30,
+      "height_cm": 62
+    },
+    "price_usd": 85,
+    "material": "steel",
+    "description": "Slim black steel C-table that slides over a sofa seat. Useful when the arm is too narrow for a drink."
+  },
+  {
+    "id": "table-side-pipe",
+    "name": "Pipe Side Table",
+    "category": "side_tables",
+    "style_tags": [
+      "industrial"
+    ],
+    "dimensions": {
+      "width_cm": 40,
+      "depth_cm": 40,
+      "height_cm": 55
+    },
+    "price_usd": 95,
+    "material": "steel and wood",
+    "description": "Black pipe frame with a round pine top. Pairs with the pipe armchair without looking like a matched set."
+  },
+  {
+    "id": "table-side-walnut",
+    "name": "Walnut Drawer Side Table",
+    "category": "side_tables",
+    "style_tags": [
+      "mid-century"
+    ],
+    "dimensions": {
+      "width_cm": 50,
+      "depth_cm": 40,
+      "height_cm": 55
+    },
+    "price_usd": 180,
+    "material": "walnut",
+    "description": "One drawer, tapered legs, and a walnut top large enough for a table lamp. Sits at the end of a sofa."
+  },
+  {
+    "id": "table-side-ceramic",
+    "name": "Ceramic Drum Side Table",
+    "category": "side_tables",
+    "style_tags": [
+      "bohemian"
+    ],
+    "dimensions": {
+      "width_cm": 38,
+      "depth_cm": 38,
+      "height_cm": 48
+    },
+    "price_usd": 140,
+    "material": "ceramic",
+    "description": "Hand-glazed ceramic garden stool used as a side table. Cream glaze with a dark rim."
+  },
+  {
+    "id": "table-side-nesting",
+    "name": "Nesting Metal Side Tables",
+    "category": "side_tables",
+    "style_tags": [
+      "contemporary"
+    ],
+    "dimensions": {
+      "width_cm": 42,
+      "depth_cm": 42,
+      "height_cm": 50
+    },
+    "price_usd": 160,
+    "material": "powder-coated steel",
+    "description": "A pair of powder-coated steel cubes, one slightly smaller. Pull the small one out when guests need a surface."
+  },
+  {
+    "id": "table-side-rattan",
+    "name": "Rattan Side Table",
+    "category": "side_tables",
+    "style_tags": [
+      "coastal",
+      "bohemian"
+    ],
+    "dimensions": {
+      "width_cm": 40,
+      "depth_cm": 40,
+      "height_cm": 52
+    },
+    "price_usd": 75,
+    "material": "rattan",
+    "description": "Open-weave rattan cylinder with a glass insert on top. Light, inexpensive, and easy to move."
+  },
+  {
+    "id": "light-arc-brass",
+    "name": "Brass Arc Floor Lamp",
+    "category": "lighting",
+    "style_tags": [
+      "modern",
+      "mid-century"
+    ],
+    "dimensions": {
+      "width_cm": 35,
+      "depth_cm": 35,
+      "height_cm": 188
+    },
+    "price_usd": 280,
+    "material": "brass and marble",
+    "description": "Brass arc on a marble base with about 160 cm of reach over a sofa. Park the base behind the sofa so the shade lands over the seat. Listed dimensions are the base footprint and overall height."
+  },
+  {
+    "id": "light-tripod-oak",
+    "name": "Tripod Floor Lamp",
+    "category": "lighting",
+    "style_tags": [
+      "scandinavian"
+    ],
+    "dimensions": {
+      "width_cm": 50,
+      "depth_cm": 50,
+      "height_cm": 155
+    },
+    "price_usd": 160,
+    "material": "oak and linen",
+    "description": "Three oak legs and a linen drum shade. The tripod footprint is wider than a pole lamp, so keep it out of the main path."
+  },
+  {
+    "id": "light-industrial-floor",
+    "name": "Industrial Floor Lamp",
+    "category": "lighting",
+    "style_tags": [
+      "industrial"
+    ],
+    "dimensions": {
+      "width_cm": 36,
+      "depth_cm": 36,
+      "height_cm": 162
+    },
+    "price_usd": 130,
+    "material": "steel",
+    "description": "Black steel pharmacy lamp with an adjustable arm and a metal shade. Task light for a reading chair."
+  },
+  {
+    "id": "light-paper-floor",
+    "name": "Paper Lantern Floor Lamp",
+    "category": "lighting",
+    "style_tags": [
+      "japandi"
+    ],
+    "dimensions": {
+      "width_cm": 46,
+      "depth_cm": 46,
+      "height_cm": 142
+    },
+    "price_usd": 110,
+    "material": "rice paper and wood",
+    "description": "Tall rice-paper column on a small wood base. Soft ambient light rather than a reading lamp."
+  },
+  {
+    "id": "light-ceramic-table",
+    "name": "Ceramic Table Lamp",
+    "category": "lighting",
+    "style_tags": [
+      "modern",
+      "scandinavian"
+    ],
+    "dimensions": {
+      "width_cm": 28,
+      "depth_cm": 28,
+      "height_cm": 48
+    },
+    "price_usd": 90,
+    "material": "ceramic and linen",
+    "description": "Matte sand ceramic base with a tapered linen shade. Sized for the round oak side table."
+  },
+  {
+    "id": "light-brass-task",
+    "name": "Brass Task Lamp",
+    "category": "lighting",
+    "style_tags": [
+      "mid-century"
+    ],
+    "dimensions": {
+      "width_cm": 18,
+      "depth_cm": 36,
+      "height_cm": 42
+    },
+    "price_usd": 75,
+    "material": "brass",
+    "description": "Small adjustable brass lamp with a conical shade. Sits on a side table and points at a book."
+  },
+  {
+    "id": "light-globe-pendant",
+    "name": "Globe Pendant",
+    "category": "lighting",
+    "style_tags": [
+      "modern"
+    ],
+    "dimensions": {
+      "width_cm": 32,
+      "depth_cm": 32,
+      "height_cm": 40
+    },
+    "price_usd": 140,
+    "material": "glass and brass",
+    "description": "32 cm opal glass globe on a short brass canopy. Hung over a coffee table it becomes the room center light. Dimensions are the fixture, not the drop."
+  },
+  {
+    "id": "light-rattan-pendant",
+    "name": "Rattan Pendant",
+    "category": "lighting",
+    "style_tags": [
+      "bohemian",
+      "coastal"
+    ],
+    "dimensions": {
+      "width_cm": 46,
+      "depth_cm": 46,
+      "height_cm": 38
+    },
+    "price_usd": 95,
+    "material": "rattan",
+    "description": "Open rattan dome that throws a patterned shadow. Best centered over a table rather than tucked in a low corner."
+  },
+  {
+    "id": "light-arc-black",
+    "name": "Matte Black Arc Lamp",
+    "category": "lighting",
+    "style_tags": [
+      "contemporary"
+    ],
+    "dimensions": {
+      "width_cm": 40,
+      "depth_cm": 40,
+      "height_cm": 172
+    },
+    "price_usd": 220,
+    "material": "steel",
+    "description": "Matte black arc with about 150 cm of reach and a flat steel base instead of marble. Dimensions are the base footprint and overall height."
+  },
+  {
+    "id": "light-alabaster-table",
+    "name": "Alabaster Table Lamp",
+    "category": "lighting",
+    "style_tags": [
+      "traditional",
+      "modern"
+    ],
+    "dimensions": {
+      "width_cm": 24,
+      "depth_cm": 24,
+      "height_cm": 46
+    },
+    "price_usd": 190,
+    "material": "alabaster",
+    "description": "Glowing alabaster cube with no fabric shade. Low warm light beside a wingback or on a drawer side table."
+  },
+  {
+    "id": "rug-wool-flatweave",
+    "name": "Wool Flatweave Rug",
+    "category": "rugs",
+    "style_tags": [
+      "scandinavian",
+      "modern"
+    ],
+    "dimensions": {
+      "width_cm": 200,
+      "depth_cm": 300,
+      "height_cm": 0.8
+    },
+    "price_usd": 420,
+    "material": "wool",
+    "description": "Undyed cream wool flatweave with two thin charcoal stripes. Low pile so chair legs slide, and large enough for the front sofa legs."
+  },
+  {
+    "id": "rug-jute-natural",
+    "name": "Natural Jute Rug",
+    "category": "rugs",
+    "style_tags": [
+      "coastal",
+      "bohemian"
+    ],
+    "dimensions": {
+      "width_cm": 160,
+      "depth_cm": 230,
+      "height_cm": 1.0
+    },
+    "price_usd": 180,
+    "material": "jute",
+    "description": "Braided jute with a cotton binding. Texture-first, and better under a coffee table than under a rolling chair."
+  },
+  {
+    "id": "rug-moroccan-shag",
+    "name": "Moroccan Shag Rug",
+    "category": "rugs",
+    "style_tags": [
+      "bohemian"
+    ],
+    "dimensions": {
+      "width_cm": 200,
+      "depth_cm": 280,
+      "height_cm": 3.0
+    },
+    "price_usd": 350,
+    "material": "wool",
+    "description": "High-pile ivory wool shag with a faint diamond. Hides wear and needs a vacuum with a beater bar."
+  },
+  {
+    "id": "rug-persian-style",
+    "name": "Persian-Style Rug",
+    "category": "rugs",
+    "style_tags": [
+      "traditional"
+    ],
+    "dimensions": {
+      "width_cm": 240,
+      "depth_cm": 340,
+      "height_cm": 1.0
+    },
+    "price_usd": 650,
+    "material": "wool",
+    "description": "Densely patterned wool rug in rust, indigo, and cream. The 240 by 340 cm size anchors a full seating group."
+  },
+  {
+    "id": "rug-abstract-modern",
+    "name": "Abstract Modern Rug",
+    "category": "rugs",
+    "style_tags": [
+      "modern",
+      "contemporary"
+    ],
+    "dimensions": {
+      "width_cm": 200,
+      "depth_cm": 300,
+      "height_cm": 1.2
+    },
+    "price_usd": 290,
+    "material": "wool blend",
+    "description": "Soft-edged blocks of sand, clay, and black on a low pile. Sits under a marble coffee table without fighting it."
+  },
+  {
+    "id": "rug-kilim",
+    "name": "Kilim Rug",
+    "category": "rugs",
+    "style_tags": [
+      "mid-century",
+      "bohemian"
+    ],
+    "dimensions": {
+      "width_cm": 170,
+      "depth_cm": 240,
+      "height_cm": 0.6
+    },
+    "price_usd": 220,
+    "material": "wool",
+    "description": "Flat kilim with geometric bands in rust and black. Thin enough that a door can swing over the edge."
+  },
+  {
+    "id": "rug-hide",
+    "name": "Hide Rug",
+    "category": "rugs",
+    "style_tags": [
+      "industrial",
+      "modern"
+    ],
+    "dimensions": {
+      "width_cm": 180,
+      "depth_cm": 220,
+      "height_cm": 1.0
+    },
+    "price_usd": 480,
+    "material": "cowhide",
+    "description": "Natural hide pieced from two skins with a short hair direction. The outline is irregular; listed size is the bounding box."
+  },
+  {
+    "id": "rug-low-pile-gray",
+    "name": "Low-Pile Gray Rug",
+    "category": "rugs",
+    "style_tags": [
+      "minimalist",
+      "scandinavian"
+    ],
+    "dimensions": {
+      "width_cm": 200,
+      "depth_cm": 290,
+      "height_cm": 0.7
+    },
+    "price_usd": 140,
+    "material": "polypropylene",
+    "description": "Heather-gray low pile that is easy to clean. The practical, lower-priced option under a family sofa."
+  }
+]

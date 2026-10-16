@@ -1,0 +1,19 @@
+{
+  "room_type": "living_room",
+  "dimensions": {
+    "length_m": 5.2,
+    "width_m": 4.1,
+    "height_m": 2.7
+  },
+  "openings": [
+    {
+      "type": "window",
+      "wall": "north",
+      "width_m": 1.8
+    }
+  ],
+  "existing_furniture": [],
+  "style_preference": "modern scandinavian",
+  "budget_usd": 2500,
+  "user_notes": "Need a sofa that faces the window and a coffee table"
+}
