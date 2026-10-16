@@ -1,0 +1,69 @@
+{
+  "cases": [
+    {
+      "id": "sofa-and-coffee-table",
+      "room": "data/rooms/sample_living_room.json",
+      "query": "Need a sofa that faces the window and a coffee table",
+      "relevant_product_ids": [
+        "sofa-oslo-linen",
+        "sofa-fjord-wool",
+        "sofa-coastal-slipcover",
+        "table-coffee-oval-oak"
+      ],
+      "must_respect": ["budget", "fit"]
+    },
+    {
+      "id": "scandi-lounge-chair",
+      "room": "data/rooms/sample_living_room.json",
+      "query": "A scandinavian lounge chair beside the window",
+      "relevant_product_ids": ["chair-bergen-lounge"],
+      "must_respect": ["budget", "fit"]
+    },
+    {
+      "id": "wool-flatweave-rug",
+      "room": "data/rooms/sample_living_room.json",
+      "query": "A wool rug for a modern scandinavian living room",
+      "relevant_product_ids": ["rug-wool-flatweave"],
+      "must_respect": ["budget"]
+    },
+    {
+      "id": "brass-arc-lamp",
+      "room": "data/rooms/sample_living_room.json",
+      "query": "A brass arc floor lamp over the sofa",
+      "relevant_product_ids": ["light-arc-brass"],
+      "must_respect": ["budget"]
+    },
+    {
+      "id": "oak-side-table",
+      "room": "data/rooms/sample_living_room.json",
+      "query": "A small oak side table next to the sofa",
+      "relevant_product_ids": ["table-side-round-oak"],
+      "must_respect": ["budget"]
+    },
+    {
+      "id": "tight-budget-side-table",
+      "room": "data/evals/rooms/tight_budget_living_room.json",
+      "query": "A side table that stays inside the budget",
+      "relevant_product_ids": [
+        "table-side-rattan",
+        "table-side-c",
+        "table-side-pipe"
+      ],
+      "must_respect": ["budget"]
+    },
+    {
+      "id": "compact-sofa-fit",
+      "room": "data/evals/rooms/compact_living_room.json",
+      "query": "A compact sofa that fits the longest wall",
+      "relevant_product_ids": ["sofa-compact-loveseat"],
+      "must_respect": ["fit", "budget"]
+    },
+    {
+      "id": "midcentury-lounge-chair",
+      "room": "data/evals/rooms/midcentury_living_room.json",
+      "query": "A mid-century lounge chair",
+      "relevant_product_ids": ["chair-shell-lounge"],
+      "must_respect": ["budget", "fit"]
+    }
+  ]
+}

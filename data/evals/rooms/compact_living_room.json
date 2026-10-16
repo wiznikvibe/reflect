@@ -1,0 +1,13 @@
+{
+  "room_type": "living_room",
+  "dimensions": {
+    "length_m": 1.6,
+    "width_m": 1.5,
+    "height_m": 2.4
+  },
+  "openings": [],
+  "existing_furniture": [],
+  "style_preference": "modern scandinavian",
+  "budget_usd": 900,
+  "user_notes": "The longest wall is short, so the sofa has to be compact."
+}
